@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SPU221 Android app</string>
+    <string name="main_title">Base of Android</string>
+    <string name="main_calc_button">Calculator</string>
+    <string name="main_game_button">Game Maybe</string>
+
+    <string name="calc_title">Calculator</string>
+
+</resources>

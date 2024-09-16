@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="press">#F8847A</color>
+
+    <color name="main_background">#20202E</color>
+    <color name="main_title">#9999F0</color>
+    <color name="main_button_background">#3D3223</color>
+    <color name="main_button_foreground">#C5D2E5</color>
+
+    <color name="calc_background">#202020</color>
+    <color name="calc_digit_background_button">#3B3B3B</color>
+    <color name="calc_equal_background_button">#FD877F</color>
+    <color name="calc_button_text_color">#FFFFFF</color>
+    <color name="calc_history_foreground">#616161</color>
+    <color name="calc_result_foreground">#FCFCFC</color>
+</resources>
