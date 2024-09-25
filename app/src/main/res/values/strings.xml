@@ -5,5 +5,13 @@
     <string name="main_game_button">Game Maybe</string>
 
     <string name="calc_title">Calculator</string>
+    <string name="calc_btn_digit_0">ʘ</string>
+    <string name="calc_btn_minus">\u2212</string>
+    <string name="calc_btn_dot">,</string>
+    <string name="calc_btn_square">x²</string>
+    <string name="calc_btn_sqrt">√x</string>
 
+    <string name="calc_msg_max_digits">Max digit is use</string>
+    <string name="calc_msg_two_dots">Only one dot can be</string>
+    <string name="calc_msg_minus_zero">Zero not chang sign</string>
 </resources>
