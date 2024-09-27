@@ -4,14 +4,43 @@
     <string name="main_calc_button">Calculator</string>
     <string name="main_game_button">Game Maybe</string>
 
+    <!--messages-->
+    <string name="calc_msg_max_digits">Max digit is use</string>
+    <string name="calc_msg_two_dots">Only one dot can be</string>
+    <string name="calc_msg_minus_zero">Zero not chang sign</string>
+    <string name="calc_msg_two_sign">Already used sign</string>
+
+
+
     <string name="calc_title">Calculator</string>
     <string name="calc_btn_digit_0">ʘ</string>
     <string name="calc_btn_minus">\u2212</string>
     <string name="calc_btn_dot">,</string>
     <string name="calc_btn_square">x²</string>
+    <string name="calc_btn_division">/</string>
+    <string name="calc_btn_multipli">x</string>
+    <string name="calc_btn_percent">%</string>
     <string name="calc_btn_sqrt">√x</string>
-
-    <string name="calc_msg_max_digits">Max digit is use</string>
-    <string name="calc_msg_two_dots">Only one dot can be</string>
-    <string name="calc_msg_minus_zero">Zero not chang sign</string>
+    <string name="calc_btn_plus">+</string>
+    <string name="calc_btn_pm">\u2213</string>
+    <string name="button_ce">CE</string>
+    <string name="button_clear">C</string>
+    <string name="button_backspace">backspace</string>
+    <string name="button_7">7</string>
+    <string name="button_8">8</string>
+    <string name="button_9">9</string>
+    <string name="button_4">4</string>
+    <string name="button_5">5</string>
+    <string name="button_6">6</string>
+    <string name="button_1">1</string>
+    <string name="button_2">2</string>
+    <string name="button_3">3</string>
+    <string name="button_equal">=</string>
+    <string name="butoon_MC">MC</string>
+    <string name="button_MR">MR</string>
+    <string name="button_M_plus">M+</string>
+    <string name="button_M_minus">M-</string>
+    <string name="button_MS">MS</string>
+    <string name="button_M_tilda">M~</string>
+    <string name="button_one_divide_x">1/x</string>
 </resources>
