@@ -15,14 +15,11 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.util.Stack;
 
-import itstep.learning.spu221.serv.Calculator;
-import itstep.learning.spu221.R;
 
 
 public class CalcActivity extends AppCompatActivity {
 
     private final int maxDigits = 11;
-    private Calculator calculator;
     private TextView tvHistory;
     private TextView tvResult;
     private String zeroSign;
@@ -38,7 +35,6 @@ public class CalcActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_calc);
-        calculator = new Calculator();
         tvHistory = findViewById(R.id.calc_tv_history);
         tvResult = findViewById(R.id.calc_tv_result);
         zeroSign = getString(R.string.calc_btn_digit_0);

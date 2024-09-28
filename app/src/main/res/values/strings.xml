@@ -2,14 +2,19 @@
     <string name="app_name">SPU221 Android app</string>
     <string name="main_title">Base of Android</string>
     <string name="main_calc_button">Calculator</string>
-    <string name="main_game_button">Game Maybe</string>
+    <string name="main_anim_button">Animation</string>
 
+    <!--region Animation-->
+    <string name="anim_title">Animation</string>
+    <!--endregion-->
+
+
+    <!--region Calculator-->
     <!--messages-->
     <string name="calc_msg_max_digits">Max digit is use</string>
     <string name="calc_msg_two_dots">Only one dot can be</string>
     <string name="calc_msg_minus_zero">Zero not chang sign</string>
     <string name="calc_msg_two_sign">Already used sign</string>
-
 
 
     <string name="calc_title">Calculator</string>
@@ -43,4 +48,7 @@
     <string name="button_MS">MS</string>
     <string name="button_M_tilda">M~</string>
     <string name="button_one_divide_x">1/x</string>
+    <string name="main_game_button">Some Game</string>
+
+    <!--endregion-->
 </resources>

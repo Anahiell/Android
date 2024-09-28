@@ -15,4 +15,6 @@
     <color name="calc_button_text_color">#FFFFFF</color>
     <color name="calc_history_foreground">#616161</color>
     <color name="calc_result_foreground">#FCFCFC</color>
+
+    <color name="for_game">#42A2F6</color>
 </resources>

@@ -60,6 +60,20 @@
 
             />
         <Button
+            android:id="@+id/main_anim_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/main_button_background"
+            android:paddingVertical="12dp"
+            android:text="@string/main_anim_button"
+            android:textColor="@color/main_button_foreground"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="@null"
+
+            />
+        <Button
             android:id="@+id/main_game_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
