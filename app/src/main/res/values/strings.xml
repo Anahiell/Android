@@ -48,7 +48,23 @@
     <string name="button_MS">MS</string>
     <string name="button_M_tilda">M~</string>
     <string name="button_one_divide_x">1/x</string>
+    <!--endregion-->
+
+
+
+
     <string name="main_game_button">Some Game</string>
+    <string name="game_restart">Restart</string>
+    <string name="game_undo">Undo</string>
+    <string name="game_score">Score</string>
+    <string name="game_best">Best</string>
+
+
+    <string name="anim_rotate_trans">Rotate \n + \n Trans</string>
+    <string name="anim_rotate">Rotate</string>
+    <string name="anim_scale_2">Scale 2 \n p in center position</string>
+    <string name="anim_scale">Scale but \n p = x(0)+y(0)</string>
+    <string name="anim_fade_in">Fade in</string>
 
     <!--endregion-->
 </resources>

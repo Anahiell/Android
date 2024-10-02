@@ -1,5 +1,9 @@
 package itstep.learning.spu221;
 
+import android.animation.Animator;
+import android.animation.AnimatorInflater;
+import android.annotation.SuppressLint;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -19,7 +23,7 @@ public class AnimActivity extends AppCompatActivity {
     private Animation rotate1Animation;
     private Animation trans1Animation;
 
-
+    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +50,8 @@ public class AnimActivity extends AppCompatActivity {
         findViewById(R.id.anim_v_scale_2).setOnClickListener(this::scale2Click);
         findViewById(R.id.anim_v_rotate_1).setOnClickListener(this::rotate1Click);
         findViewById(R.id.anim_v_trans_1).setOnClickListener(this::trans1Click);
+
+
     }
 
     private void alphaClick(View view)

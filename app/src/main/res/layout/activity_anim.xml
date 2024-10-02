@@ -3,14 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AnimActivity"
     android:clipChildren="false"
     android:clipToPadding="false"
-    >
-
+    android:orientation="vertical"
+    tools:context=".AnimActivity">
 
 
     <TextView
@@ -19,77 +17,107 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:text="@string/anim_title"
+        android:textAlignment="center"
         android:textSize="20sp"
-        android:textAlignment="center"/>
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:orientation="horizontal"
-        android:padding="10dp"
         android:clipChildren="false"
         android:clipToPadding="false"
-        >
-        <View
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
             android:id="@+id/anim_v_alpha"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="10dp"
             android:layout_weight="1"
-            android:background="@color/calc_equal_background_button"
-            android:layout_margin="10dp"/>
-        <View
+            android:text="@string/anim_fade_in"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            style="@style/anim_view"
+            android:textColor="@color/game_table_row_views"
+            />
+
+        <TextView
             android:id="@+id/anim_v_scale_1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="10dp"
             android:layout_weight="1"
-            android:background="@color/calc_equal_background_button"
-            android:layout_margin="10dp"/>
+            android:text="@string/anim_scale"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            style="@style/anim_view"
+            android:textColor="@color/game_table_row_views"/>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:orientation="horizontal"
-        android:paddingHorizontal="10dp"
         android:clipChildren="false"
         android:clipToPadding="false"
-        >
-        <View
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp">
+
+        <TextView
             android:id="@+id/anim_v_scale_2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/calc_equal_background_button"
             android:layout_margin="10dp"
-            />
-        <View
+            android:layout_weight="1"
+            android:text="@string/anim_scale_2"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            style="@style/anim_view"
+            android:textColor="@color/game_table_row_views"/>
+
+        <TextView
             android:id="@+id/anim_v_rotate_1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="10dp"
             android:layout_weight="1"
-            android:background="@color/calc_equal_background_button"
-            android:layout_margin="10dp"/>
+            android:text="@string/anim_rotate"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            style="@style/anim_view"
+            android:textColor="@color/game_table_row_views"/>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:orientation="horizontal"
-        android:paddingHorizontal="10dp"
         android:clipChildren="false"
         android:clipToPadding="false"
-        >
-        <View
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp">
+
+        <TextView
             android:id="@+id/anim_v_trans_1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/calc_equal_background_button"
             android:layout_margin="10dp"
-            />
-        <View
+            android:layout_weight="1"
+            android:text="@string/anim_rotate_trans"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            style="@style/anim_view"
+            android:textColor="@color/game_table_row_views"/>
+
+        <TextView
             android:id="@+id/anim_v_trans_2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            android:layout_weight="1" />
     </LinearLayout>
 </LinearLayout>

@@ -17,4 +17,13 @@
     <color name="calc_result_foreground">#FCFCFC</color>
 
     <color name="for_game">#42A2F6</color>
+    <!--region color for 2048-->
+    <color name="game_main_background">#F9F6ED</color>
+    <color name="game_special_btn_background">#BAAC9F</color>
+    <color name="game_special_btn_text">#FDF9F6</color>
+    <color name="game_table_row_background">#B6AE9F</color>
+    <color name="game_table_row_views">#FA7F0B</color>
+
+
+
 </resources>
