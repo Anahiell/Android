@@ -54,10 +54,10 @@
 
 
     <string name="main_game_button">Some Game</string>
-    <string name="game_restart">Restart</string>
+    <string name="game_restart">NEW</string>
     <string name="game_undo">Undo</string>
-    <string name="game_score">Score</string>
-    <string name="game_best">Best</string>
+    <string name="game_score">Score\n%d</string>
+    <string name="game_best">Best\n%d</string>
 
 
     <string name="anim_rotate_trans">Rotate \n + \n Trans</string>

@@ -36,7 +36,7 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/btn_restart"
+                    android:id="@+id/btn_new"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/game_btn_and_score"
@@ -59,19 +59,22 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <Button
+                <TextView
+                    android:id="@+id/score"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/game_btn_and_score"
                     android:text="@string/game_score"
+                    android:textAlignment="center"
                     android:textSize="20sp"
                     />
 
-                <Button
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/game_btn_and_score"
-                    android:text="@string/game_best"
+                    android:textAlignment="center"
+                    android:text="@string/game_score"
                     android:textSize="20sp"/>
             </LinearLayout>
     </LinearLayout>
@@ -91,95 +94,127 @@
         style="@style/game_btn_and_score"
         >
         <!--region 1row-->
-        <View android:layout_width="0dp"
+        <TextView
+            android:id="@+id/game_view_0x0"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            style="@style/game_btn_table"/>
-        <View android:layout_width="0dp"
+            style="@style/game_cell_0"/>
+        <TextView
+            android:id="@+id/game_view_0x1"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            style="@style/game_btn_table"/>
-        <View android:layout_width="0dp"
+            style="@style/game_cell_0"/>
+        <TextView
+            android:id="@+id/game_view_0x2"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            style="@style/game_btn_table"/>
-        <View android:layout_width="0dp"
+            style="@style/game_cell_0"/>
+        <TextView
+            android:id="@+id/game_view_0x3"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            style="@style/game_btn_table"/>
+            style="@style/game_cell_0"/>
         <!--endregion-->
 
         <!--region 2row-->
-        <View android:layout_width="0dp"
+        <TextView
+            android:id="@+id/game_view_1x0"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            style="@style/game_btn_table"/>
-        <View android:layout_width="0dp"
+            style="@style/game_cell_0"/>
+        <TextView
+            android:id="@+id/game_view_1x1"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            style="@style/game_btn_table"/>
-        <View android:layout_width="0dp"
+            style="@style/game_cell_0"/>
+        <TextView
+            android:id="@+id/game_view_1x2"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            style="@style/game_btn_table"/>
-        <View android:layout_width="0dp"
+            style="@style/game_cell_0"/>
+        <TextView
+            android:id="@+id/game_view_1x3"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            style="@style/game_btn_table"/>
+            style="@style/game_cell_0"/>
         <!--endregion-->
 
         <!--region 3row-->
-        <View android:layout_width="0dp"
+        <TextView
+            android:id="@+id/game_view_2x0"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            style="@style/game_btn_table"/>
-        <View android:layout_width="0dp"
+            style="@style/game_cell_0"/>
+        <TextView
+            android:id="@+id/game_view_2x1"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            style="@style/game_btn_table"/>
-        <View android:layout_width="0dp"
+            style="@style/game_cell_0"/>
+        <TextView
+            android:id="@+id/game_view_2x2"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            style="@style/game_btn_table"/>
-        <View android:layout_width="0dp"
+            style="@style/game_cell_0"/>
+        <TextView
+            android:id="@+id/game_view_2x3"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            style="@style/game_btn_table"/>
+            style="@style/game_cell_0"/>
         <!--endregion-->
 
         <!--region 4row-->
-        <View android:layout_width="0dp"
+        <TextView
+            android:id="@+id/game_view_3x0"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            style="@style/game_btn_table"/>
-        <View android:layout_width="0dp"
+            style="@style/game_cell_0"/>
+        <TextView
+            android:id="@+id/game_view_3x1"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            style="@style/game_btn_table"/>
-        <View android:layout_width="0dp"
+            style="@style/game_cell_0"/>
+        <TextView
+            android:id="@+id/game_view_3x2"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            style="@style/game_btn_table"/>
-        <View android:layout_width="0dp"
+            style="@style/game_cell_0"/>
+        <TextView
+            android:id="@+id/game_view_3x3"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            style="@style/game_btn_table"/>
+            style="@style/game_cell_0"/>
         <!--endregion-->
 
     </GridLayout>

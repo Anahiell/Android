@@ -23,7 +23,22 @@
     <color name="game_special_btn_text">#FDF9F6</color>
     <color name="game_table_row_background">#B6AE9F</color>
     <color name="game_table_row_views">#FA7F0B</color>
+    <color name="game_cells_0">#3F51B5</color>
+    <color name="cell_default">#3F51B5</color>
 
+    <color name="game_bg_2">#9808FD</color>
+    <color name="game_bg_4">#EE1459</color>
+    <color name="game_bg_8">#FDC922</color>
+    <color name="game_bg_16">#02970F</color>
+    <color name="game_bg_32">#04587A</color>
+    <color name="game_bg_64">#C80880</color>
+    <color name="game_bg_128">#FD5B22</color>
 
+    <color name="game_bg_256">#edcc61</color>
+    <color name="game_bg_512">#0897D5</color>
+    <color name="game_bg_1024">#FB595B</color>
+    <color name="game_bg_2048">#EB045C</color>
+    <color name="game_bg_4096">#3E3C33</color>
 
+    cell_default
 </resources>

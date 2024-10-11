@@ -16,11 +16,32 @@
         <item name="android:layout_margin">5dp</item>
         <item name="android:padding">5dp</item>
     </style>
-    <style name="game_btn_table">
+    <style name="game_tv_right">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/btn_game_background</item>
+        <item name="android:textColor">@color/game_special_btn_text</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:padding">5dp</item>
+    </style>
+    <style name="game_cell_0">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="backgroundTint">@null</item>
         <item name="android:background">@drawable/game_table</item>
+        <item name="android:textColor">@color/game_special_btn_text</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name = "android:textSize">30sp</item>
+        <item name = "android:textStyle">bold</item>
+        <item name = "android:textAlignment">center</item>
+        <item name = "android:gravity">center</item>
+    </style>
+    <style name="game_cell_2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@color/game_cells_0</item>
         <item name="android:textColor">@color/game_special_btn_text</item>
         <item name="android:layout_margin">2dp</item>
     </style>
