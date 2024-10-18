@@ -1,8 +1,11 @@
 package itstep.learning.spu221;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -10,24 +13,36 @@ import android.widget.GridLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
+    private final List<int[][]> previousStates = new ArrayList<>();
+    private final List<Long> previousScores = new ArrayList<>();
+
     private long score;
     private final int N = 4;
+    private final String bestScoreFileName ="best_score.dat";
     private final Random random = new Random();
     private Animation fadeInAnimation;
     private final int[][] cells = new int[N][N];
     private final TextView[][] tvCells = new TextView[N][N];
     private TextView tvScore;
+    private TextView tvBestScore;
     Animation mergeAnimation;
+    private long bestScore;
 
 
     @SuppressLint("DiscouragedApi")
@@ -42,6 +57,7 @@ public class GameActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         Button btnNewGame = findViewById(R.id.btn_new);
 
         btnNewGame.setOnClickListener(v -> {
@@ -50,7 +66,8 @@ public class GameActivity extends AppCompatActivity {
 
         mergeAnimation = AnimationUtils.loadAnimation(this, R.anim.scale_2);
          tvScore= findViewById(R.id.score);
-
+         tvBestScore = findViewById(R.id.game_Best_score);
+        findViewById(R.id.game_btn_undo).setOnClickListener(this::undoClick);
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 tvCells[i][j] = findViewById(
@@ -63,17 +80,8 @@ public class GameActivity extends AppCompatActivity {
                 );
             }
         }
-//        int val = 2;
-//        for (int i = 0; i < N; i++) {
-//            for (int j = 0; j < N; j++) {
-//                cells[i][j] = val;
-//                if (val == 0)
-//                    val = 2;
-//                else val *= 2;
-//
-//            }
-//        }
 
+        findViewById(R.id.game_btn_undo).setOnClickListener(v -> undo());
         fadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.fade_in);
         fadeInAnimation.reset();
         startGame();
@@ -117,6 +125,63 @@ public class GameActivity extends AppCompatActivity {
                         }
                     }
                 });
+    }
+    private void undoClick(View view)
+    {//диалоги
+        new AlertDialog.Builder(this,
+                com.google.android.material.R.style.Theme_MaterialComponents_DayNight_Dialog_FixedSize)
+                .setTitle("Dialog example")
+                .setMessage("Cheking language")
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setCancelable(false)
+                .setPositiveButton("Close",(dialog, which)->{})
+                .setNegativeButton("Exit",(dialog, which)->this.finish())
+                .setNeutralButton("New game",(dialog, which)->this.startGame())
+                .show();
+
+    }
+    private void saveState() {
+        int[][] stateCopy = new int[N][N];
+        for (int i = 0; i < N; i++) {
+            System.arraycopy(cells[i], 0, stateCopy[i], 0, N);
+        }
+        previousStates.add(stateCopy);
+        previousScores.add(score);
+    }
+
+    private void saveMaxScore()
+    {
+        /*работа с файлами
+        * В Андроид файлы делится на две категории
+        * - "приватные" файлы - файлы с репозитория приложения,
+        * которую удаляют при удаление прниложения.*/
+        /*- обшие файлы - с других репозиториев "фото/галерея", "загрузки" тощо
+        * С такими файцлпми необходимор разрешение*/
+
+        try(FileOutputStream fos = openFileOutput(bestScoreFileName,
+                Context.MODE_PRIVATE);
+            DataOutputStream writer = new DataOutputStream(fos)) {
+            writer.writeLong(bestScore);
+            writer.flush();
+
+        }
+        catch (IOException ex)
+        {
+            Log.e("saveMaxScore", "fos"+ex.getMessage());
+        }
+
+    }
+    private void loadMaxScore()
+    {
+        try(FileInputStream fis = openFileInput(bestScoreFileName);
+            DataInputStream reader = new DataInputStream(fis)
+        ){
+            bestScore = reader.readLong();
+        }
+        catch (IOException ex)
+        {
+            Log.e("loadMaxScore","fis: "+ex.getMessage());
+        }
     }
 
     private void showField() {
@@ -226,10 +291,28 @@ public class GameActivity extends AppCompatActivity {
 private void startGame()
 {
     addScore(-score);
+    loadMaxScore();
+    showMaxScore();
+    previousStates.clear();  // Очистка стека состояний
+    previousScores.clear();
     spawnCell();
 }
+    private void undo() {
+        if (!previousStates.isEmpty()) {
+            int[][] lastState = previousStates.remove(previousStates.size() - 1);
+            for (int i = 0; i < N; i++) {
+                System.arraycopy(lastState[i], 0, cells[i], 0, N);
+            }
+            score = previousScores.remove(previousScores.size() - 1);
+            showField();
+            tvScore.setText(String.valueOf(score));
+        } else {
+            Toast.makeText(this, "Нет действий для отмены", Toast.LENGTH_SHORT).show();
+        }
+    }
 
 private boolean moveLeft() {
+    saveState();
     boolean wasMove = false;
 
     for (int i = 0; i < N; i++) {
@@ -264,6 +347,7 @@ private boolean moveLeft() {
 }
 
     private boolean moveRight() {
+        saveState();
         boolean wasMove = false;
 
         for (int i = 0; i < N; i++) {
@@ -298,6 +382,7 @@ private boolean moveLeft() {
     }
 
     private boolean moveUp() {
+        saveState();
         boolean wasMove = false;
 
         for (int j = 0; j < N; j++) {
@@ -332,6 +417,7 @@ private boolean moveLeft() {
     }
 
     private boolean moveDown() {
+        saveState();
         boolean wasMove = false;
 
         for (int j = 0; j < N; j++) {
@@ -365,10 +451,20 @@ private boolean moveLeft() {
         return wasMove;
     }
 
+    private void showMaxScore()
+    {
+        tvBestScore.setText(
+                getString(R.string.game_best, bestScore));
+    }
     private void addScore(long value)
     {
         score+=value;
         tvScore.setText(getString(R.string.game_score, score));
+        if(score>bestScore){
+            bestScore =score;
+            saveMaxScore();
+            showMaxScore();
+        }
     }
     class Coord {
         int i;

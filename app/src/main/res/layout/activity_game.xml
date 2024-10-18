@@ -44,7 +44,7 @@
                     android:textSize="20sp"/>
 
                 <Button
-                    android:id="@+id/btn_undo"
+                    android:id="@+id/game_btn_undo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/game_btn_and_score"
@@ -70,11 +70,12 @@
                     />
 
                 <TextView
+                    android:id="@+id/game_Best_score"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/game_btn_and_score"
                     android:textAlignment="center"
-                    android:text="@string/game_score"
+                    android:text="@string/game_best"
                     android:textSize="20sp"/>
             </LinearLayout>
     </LinearLayout>

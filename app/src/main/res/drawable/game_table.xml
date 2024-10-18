@@ -5,10 +5,11 @@
             <solid android:color="@color/press" />
             <corners android:radius="8dp" /> <!-- Закругленные углы -->
             <padding
-                android:left="0dp"
-                android:top="0dp"
-                android:right="0dp"
-                android:bottom="0dp" />
+                android:left="5dp"
+                android:top="5dp"
+                android:right="5dp"
+                android:bottom="5dp" />
+
         </shape>
     </item>
     <!-- Нормальное состояние -->

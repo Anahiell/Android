@@ -51,8 +51,6 @@
     <!--endregion-->
 
 
-
-
     <string name="main_game_button">Some Game</string>
     <string name="game_restart">NEW</string>
     <string name="game_undo">Undo</string>
@@ -65,6 +63,8 @@
     <string name="anim_scale_2">Scale 2 \n p in center position</string>
     <string name="anim_scale">Scale but \n p = x(0)+y(0)</string>
     <string name="anim_fade_in">Fade in</string>
+    <string name="main_rates_button">Rates (web)</string>
+    <string name="rates_exchange_rate">Exchange rate</string>
 
     <!--endregion-->
 </resources>

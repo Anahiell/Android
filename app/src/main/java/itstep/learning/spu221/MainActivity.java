@@ -36,8 +36,14 @@ public class MainActivity extends AppCompatActivity {
         calcButton.setOnClickListener(this::onCalcClick);
         findViewById(R.id.main_anim_button).setOnClickListener(this::onAnimClick);
         findViewById(R.id.main_game_button).setOnClickListener(this::onGameClick);
+        findViewById(R.id.main_rates_button).setOnClickListener(this::onRatesClick);
     }
-
+    private void onRatesClick(View view) {
+        Intent activityIntent = new Intent(
+                getApplicationContext(),
+                RatesActivity.class);
+        startActivity(activityIntent);
+    }
     private void onCalcClick(View view) {
         Intent activityIntent = new Intent(
                 getApplicationContext(),
