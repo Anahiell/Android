@@ -40,5 +40,8 @@
     <color name="game_bg_2048">#EB045C</color>
     <color name="game_bg_4096">#3E3C33</color>
 
+    <color name="chat_msg">#3EA2F4</color>
+    <color name="chat_msg_mine">#59E95D</color>
+
     cell_default
 </resources>

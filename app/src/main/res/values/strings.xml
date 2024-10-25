@@ -65,6 +65,8 @@
     <string name="anim_fade_in">Fade in</string>
     <string name="main_rates_button">Rates (web)</string>
     <string name="rates_exchange_rate">Exchange rate</string>
+    <string name="chat">Chat</string>
+    <string name="chat_ctn_send">Send</string>
 
     <!--endregion-->
 </resources>
